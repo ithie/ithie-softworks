@@ -104,6 +104,23 @@
         color: var(--res);
       }
 
+      /* Externe Links (neuer Tab): Pixel-Pfeil ↗ in Linkfarbe */
+      a[target='_blank']::after {
+        content: '';
+        display: inline-block;
+        width: 0.75em;
+        height: 0.75em;
+        margin-left: 0.6em;
+        vertical-align: 0.05em;
+        background: currentColor;
+        -webkit-mask: var(--ext) no-repeat center / contain;
+        mask: var(--ext) no-repeat center / contain;
+      }
+
+      :root {
+        --ext: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 7 7' shape-rendering='crispEdges'%3E%3Cpath d='M3 0h4v4h-1v-2h-1v-1h-2zM4 2h1v1h-1zM3 3h1v1h-1zM2 4h1v1h-1zM1 5h1v1h-1zM0 6h1v1h-1z'/%3E%3C/svg%3E");
+      }
+
       :focus-visible {
         outline: 2px solid var(--res);
         outline-offset: 4px;
@@ -653,6 +670,17 @@
               >YOUTUBE</a
             >
             <p>Gameplay videos and shorts.</p>
+          </li>
+          <li>
+            <a
+              class="name"
+              href="https://www.instagram.com/i.thie.softworks"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram (opens in a new tab)"
+              >INSTAGRAM</a
+            >
+            <p>Screenshots and news from development.</p>
           </li>
         </ul>
       </section>
