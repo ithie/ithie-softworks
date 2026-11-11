@@ -253,6 +253,27 @@
         transform: rotateX(-10deg) rotateY(154deg) translateY(-6px);
       }
 
+      /* Nebeneinander: rechte Schachtel spiegeln, beide schauen sich an */
+      @media (min-width: 560px) {
+        .slot:nth-child(2) .box {
+          margin: 6px var(--d) 10px 0;
+        }
+
+        .slot:nth-child(2) .box::after {
+          left: -6%;
+          right: -20%;
+        }
+
+        .slot:nth-child(2) .box-3d {
+          transform: rotateX(-12deg) rotateY(-26deg);
+        }
+
+        .slot:nth-child(2) .box:hover .box-3d,
+        .slot:nth-child(2) .box:focus-visible .box-3d {
+          transform: rotateX(-10deg) rotateY(-154deg) translateY(-6px);
+        }
+      }
+
       .face {
         position: absolute;
         display: block;
@@ -334,6 +355,10 @@
         background: var(--spine);
         filter: brightness(0.72);
         transform: rotateY(-90deg) translateZ(calc(var(--w) / 2));
+      }
+
+      .side.right {
+        transform: rotateY(90deg) translateZ(calc(var(--w) / 2));
       }
 
       .side span {
@@ -547,6 +572,7 @@
                   <span class="title">SAR:<br />CALLSIGN<br />WOLF</span>
                 </span>
                 <span class="face side"><span>SAR: CALLSIGN WOLF</span></span>
+                <span class="face side right"><span>SAR: CALLSIGN WOLF</span></span>
                 <span class="face top"></span>
                 <span class="face back">
                   <span class="band">SAR: CALLSIGN WOLF</span>
@@ -574,7 +600,7 @@
                     />
                   </span>
                   <span class="foot"
-                    ><span>iPHONE · iPAD</span
+                    ><span>iPHONE · iPAD · MAC</span
                     ><img src="assets/logo.svg" alt=""
                   /></span>
                 </span>
@@ -582,7 +608,7 @@
             </a>
             <p class="desc">
               Isometric helicopter search-and-rescue: physics-based flight,
-              winch rescues, dynamic weather.
+              winch rescues, dynamic weather. iPhone, iPad &amp; Mac.
             </p>
             <a
               class="store"
@@ -614,6 +640,7 @@
                   <span class="sticker">COMING<br />SOON</span>
                 </span>
                 <span class="face side"><span>POPULATE THE STARS</span></span>
+                <span class="face side right"><span>POPULATE THE STARS</span></span>
                 <span class="face top"></span>
                 <span class="face back">
                   <span class="band">POPULATE THE STARS</span>
@@ -644,14 +671,14 @@
                     >Colonize the solar system and the stars beyond.</span
                   >
                   <span class="foot"
-                    ><span>iPHONE · MAC</span><img src="assets/logo.svg" alt=""
+                    ><span>iPHONE · iPAD · MAC</span><img src="assets/logo.svg" alt=""
                   /></span>
                 </span>
               </span>
             </a>
             <p class="desc">
               Colonize the solar system and the stars beyond. Real orbits,
-              exponential growth. iPhone &amp; Mac.
+              exponential growth. iPhone, iPad &amp; Mac.
             </p>
           </div>
         </div>
@@ -687,8 +714,8 @@
     </main>
     <footer>
       <div class="links">
-        <a href="impressum.html" hreflang="de" lang="de"
-          >IMPRESSUM · DATENSCHUTZ</a
+        <a href="impressum.html"
+          ><span lang="de">IMPRESSUM</span> · LEGAL NOTICE &amp; PRIVACY</a
         >
       </div>
       <div class="made">
