@@ -104,7 +104,6 @@
         color: var(--res);
       }
 
-      /* Externe Links (neuer Tab): Pixel-Pfeil ↗ in Linkfarbe */
       a[target='_blank']::after {
         content: '';
         display: inline-block;
@@ -172,7 +171,6 @@
         color: var(--pop);
       }
 
-      /* --- Spielschachteln --- */
       .shelf {
         display: grid;
         grid-template-columns: 1fr;
@@ -222,7 +220,6 @@
         --spine-ink: #031c1a;
       }
 
-      /* Schatten am Boden */
       .box::after {
         content: "";
         position: absolute;
@@ -247,13 +244,11 @@
         transition: transform 0.9s cubic-bezier(0.25, 0.8, 0.3, 1);
       }
 
-      /* Hover: Schachtel umdrehen, Rückseite mit Screenshots */
       .box:hover .box-3d,
       .box:focus-visible .box-3d {
         transform: rotateX(-10deg) rotateY(154deg) translateY(-6px);
       }
 
-      /* Nebeneinander: rechte Schachtel spiegeln, beide schauen sich an */
       @media (min-width: 560px) {
         .slot:nth-child(2) .box {
           margin: 6px var(--d) 10px 0;
@@ -281,7 +276,6 @@
         backface-visibility: hidden;
       }
 
-      /* Pappe: feine Faser + abgewetzte Kanten */
       .face::after {
         content: "";
         position: absolute;
@@ -379,7 +373,6 @@
         transform: rotateX(90deg) translateZ(calc(var(--h) / 2));
       }
 
-      /* Laschen-Falz auf dem Deckel */
       .top::before {
         content: "";
         position: absolute;
@@ -510,6 +503,11 @@
 
       .list a.name:hover {
         color: var(--res);
+      }
+
+      .list p a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
       }
 
       .list time {
@@ -699,7 +697,14 @@
             <time datetime="2026-11-16">16 NOV 2026</time>
             <p>
               SAR: Callsign WOLF 1.6.2 is out – the update is now available on
-              the App Store.
+              the
+              <a
+                href="https://apps.apple.com/us/app/sar-callsign-wolf/id6769071734"
+                target="_blank"
+                rel="noopener"
+                aria-label="App Store: SAR: Callsign WOLF (opens in a new tab)"
+                >App Store</a
+              >.
             </p>
           </li>
           <li>
