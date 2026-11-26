@@ -191,8 +191,8 @@
         gap: 22px;
       }
 
-      .slot h3 {
-        margin: 0;
+      .shelf-title {
+        margin: 0 0 22px;
         font-size: var(--ps-1);
         font-weight: normal;
         letter-spacing: 2px;
@@ -472,6 +472,7 @@
       }
 
       .store {
+        margin-top: auto;
         font-size: var(--ps-1);
         letter-spacing: 2px;
         color: var(--pop);
@@ -558,9 +559,9 @@
 
       <section aria-labelledby="games-title">
         <h2 id="games-title">GAMES</h2>
+        <h3 class="shelf-title">OUT NOW</h3>
         <div class="shelf">
           <div class="slot">
-            <h3>OUT NOW</h3>
             <a
               class="box wolf"
               href="https://callsign-wolf.de/"
@@ -627,11 +628,10 @@
           </div>
 
           <div class="slot">
-            <h3>COMING SOON</h3>
             <a
               class="box pts"
               href="https://www.populate-the-stars.com/"
-              aria-label="Populate the Stars – game website (coming soon)"
+              aria-label="Populate the Stars – game website"
             >
               <span class="box-3d">
                 <span class="face front">
@@ -643,7 +643,6 @@
                     alt=""
                   />
                   <span class="title">POPULATE<br />THE<br />STARS</span>
-                  <span class="sticker">COMING<br />SOON</span>
                 </span>
                 <span class="face side"><span>POPULATE THE STARS</span></span>
                 <span class="face side right"><span>POPULATE THE STARS</span></span>
@@ -686,6 +685,14 @@
               Colonize the solar system and the stars beyond. Real orbits,
               exponential growth. iPhone, iPad &amp; Mac.
             </p>
+            <a
+              class="store"
+              href="https://apps.apple.com/app/populate-the-stars/id6826905148"
+              target="_blank"
+              rel="noopener"
+              aria-label="App Store: Populate the Stars (opens in a new tab)"
+              >APP STORE</a
+            >
           </div>
         </div>
       </section>
@@ -693,6 +700,20 @@
       <section aria-labelledby="news-title">
         <h2 id="news-title">NEWS</h2>
         <ul class="list">
+          <li>
+            <time datetime="2026-11-25">25 NOV 2026</time>
+            <p>
+              Populate the Stars is out! The game is now available on the
+              <a
+                href="https://apps.apple.com/app/populate-the-stars/id6826905148"
+                target="_blank"
+                rel="noopener"
+                aria-label="App Store: Populate the Stars (opens in a new tab)"
+                >App Store</a
+              >
+              for iPhone, iPad and Mac.
+            </p>
+          </li>
           <li>
             <time datetime="2026-11-16">16 NOV 2026</time>
             <p>
